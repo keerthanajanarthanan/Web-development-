@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        h1{
+            color: #2e2e7d;
+        }
+        .btn{
+            background-color: blueviolet;
+            color:white;
+            border-radius: 15px;
+        }
+        .div1{
+            margin-top: 200px;
+        }
+        .div2 {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+    <div class="demo">
+        <div class="div1">
+        <h1 >Hi There</h1>
+        <h1>I'm keerthana</h1>
+        <h1 style="color: orangered;">Pathan</h1>
+        <h3>I Am Into <span style="color: red">Cloud AI</span> </h3>
+        <button class="btn">About Me</button>
+    </div>
+    <div class="div2">
+    </div>
+</div>
+</body>
+</html>
