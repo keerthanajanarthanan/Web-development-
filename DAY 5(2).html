@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        display: flex;
+    }
+    .box1{
+        width: 35%;
+        height: 640px;
+        background-color: white;
+        box-shadow: 0 4px 8px;
+    }
+    .box2{
+        width: 27%;
+        height: 640px;
+        background-color: lightcyan;
+        box-shadow: 0 4px 8px;
+    }
+    .header{
+        display: flex;
+        /* margin-top: 5px; */
+        justify-content: flex-start;
+        gap: 50px;
+    }
+    .header h3{
+        margin-left: 20px;
+    }
+    .logo h2{
+        margin-left: 10px;
+    }
+    .but{
+        border-radius: 10px;
+    }
+    .home{
+        margin-left: 10px;
+    }
+    .check{
+        margin-left: 10px;
+    }
+    .info{
+        margin-left: 10px;
+    }
+    .tab{
+        display: flex;
+        margin-left: 10px;
+        gap: 10px;
+    }
+    .tab button{
+        border-radius: 10px;
+        height: 32px;
+        width: 200px;
+    }
+    .tab2{
+        display: flex;
+        margin-left: 10px;
+        gap: 10px;
+    }
+    .tab2 button{
+        border-radius: 10px;
+        height: 32px;
+        width: 200px;
+         margin-top: 5px; 
+    }
+    .deliv{
+        margin-left: 10px;
+        gap: 100px;
+    }
+    .demo1{
+        display: flex;
+        margin-left: 10px;
+        gap: 10px;
+    }
+    .demo1 button{
+        width: 200px;
+        height: 32px;
+        border-radius: 15px;
+    }
+    .demo2{
+        display: flex;
+        margin-left: 10px;
+        gap: 10px;
+    }
+    .demo2 button{
+        width: 200px;
+        height: 32px;
+        border-radius: 15px;
+        margin-top: 10px;
+    }
+    .pay{
+        margin-left: 10px;
+    }
+    .phone{
+        display: flex;
+    }
+    .phone button{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .pal{
+        display: flex;
+    }
+    .pal button{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px; 
+    }
+    .order-summary{
+        margin-left:10px;
+    }
+    .box2{
+    
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="box1"> 
+            <div class="header">
+                <div class="logo"> <h2> SPROUT</h2> </div>
+                <div class="but">
+                <button style="background-color: white"> SEARCH </button> </div>
+                <div class="cat"> CATEGORY </div>
+            </div>
+            <div class="home"> <h5> Home page </h5></div>
+            <div class="check"> <h2> CHECK OUT </h2></div>
+            <div class="info"> <h4> personal information </h4></div>
+            <div class="tab"> 
+                <button style="background-color: white"> FIRST NAME </button>
+                <button style="background-color: white"> LAST NAME </button>
+            </div>
+            <div class="tab2">
+                <button style="background-color: white"> Eamil  </button>
+                <button style="background-color: white"> password </button>
+            </div>
+            <div class="deliv"> 
+                <h3> Delivery Details </h3>
+                <div class="row">
+                    <select>
+                      <option>United Kingdom (UK)</option>
+                    </select>
+                    <input type="text" placeholder="Town / City">
+                  </div>
+                  <div class="row">
+                    <input type="text" placeholder="Street">
+                    <input type="text" placeholder="Postcode">
+                  </div>
+                  <div class="row">
+                    <select>
+                      <option>Without plastic</option>
+                    </select>
+                    <input type="text" placeholder="By courier">
+                  </div>
+            </div>
+            
+            <div class="pay">
+                <h4> PAYMENT </h4>
+                <div class="payment-options">
+                    <label><input type="checkbox"> Apple Pay</label>
+                    <label><input type="checkbox"> PayPal</label>
+                    <label><input type="checkbox" checked> Credit or debit card</label>
+                  </div>
+                  <div class="row">
+                    <input type="text" placeholder="Card number">
+                    <input type="text" placeholder="Expiration date">
+                    <input type="text" placeholder="CVV code">
+                  </div>
+                  
+            </div>
+            
+
+        </div>
+        <div class="box2"> 
+            <div class="order-summary">
+                <h3>Your order:</h3>
+                <p>Subtotal: <strong>$60.30</strong></p>
+                <p>Delivery: <strong>$8.20</strong></p>
+                <h4>Total: $68.50</h4>
+                <button>Purchase</button>
+                <ul>
+                    <li>
+                      <img src="" alt="Jerky persimmon">
+                      Jerky persimmon – 1 kg – $8.60
+                    </li>
+                    <li>
+                      <img src="" alt="Macadamia">
+                      Macadamia in the shell – 2 kg – $28.00
+                    </li>
+                    <li>
+                      <img src="" alt="Spiced nuts">
+                      Spiced nuts – 500g – $7.20
+                    </li>
+                    <li>
+                      <img src="" alt="Banana">
+                      Banana – 4 kg – $5.70
+                    </li>
+                    <li>
+                      <img src="" alt="Kiwifruit">
+                      Premium kiwifruit – 1 kg – $4.00
+                    </li>
+                    <li>
+                      <img src="" alt="Orange">
+                      Orange – 2 kg – $6.80
+                    </li>
+                  </ul>
+        </div>
+
+
+    </div>
+</body>
+</html>
