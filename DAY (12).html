@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .head{
+        width: 1000px;
+        height: 1500px;
+        background-color: lavender;
+    }
+    .main{
+        display: flex;
+    }
+    .left{
+        margin-left: 48px;
+        width: 300px;
+        height: 600px;
+        background-color: white;
+        box-shadow: 0 4px 8px ;
+    }
+    .right{
+        width: 600px;
+        height: 600px;
+        background-color: white;
+        box-shadow: 0 4px 8px ;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    #date{
+        width: 100px;
+        height: 20px;
+        margin-top: 20px;
+        margin-right: 50px;
+    }
+    .nav h4 {
+        margin-left: 50px;
+    }
+    .fil{
+        display: flex;
+        margin-top: 5px;
+        justify-content: space-evenly;
+    }
+    .qu{
+        margin-left: 20px;
+    }
+    .input , .input2 , .input3 , .input4{
+        margin-left: 20px;
+    }
+    .input3{
+        margin-top: 5px;
+    }
+    #hell{
+        margin-left: 25px;
+    }
+     .input5 , .input6{
+        margin-left: 20px;
+    }
+    .ori h4{
+        text-align: center;
+    }
+    .desnity h4{
+        text-align: center;
+    }
+    .header{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .colour{
+        width: 550px;
+        height: 250px;
+        background-color: lightblue;
+        margin-left: 25px;
+    }
+    .colour1{
+        width: 550px;
+        height: 250px;
+        margin-top: 10px;
+        background-color: lightblue;
+    }
+    .colours{
+        width: 550px;
+        height: 450px;
+        background-color: lightblue;
+        margin-left: 25px;
+    }
+    .temp , .temp1 , .temps , .temps1{
+        display: flex;
+        margin-left: 20px;
+        justify-content: space-between;
+    }
+    .temp , .temp1 , .temps , .temps1{
+        margin-right: 20px;
+    }
+    .box1{
+        width: 115px;
+        height: 90px;
+        background-color: lavender;
+        margin-left: 10px;
+    }
+    .box{
+        display: flex;
+    }
+    .check{
+        margin-left: 360px;
+        color: red;
+    }
+    .straight{
+        display: flex;
+        margin-left: 20px;
+        gap: 20px;
+    }
+    .datess{
+        display: flex;
+        margin-left: 20px;
+        gap: 80px;
+    }
+</style>
+<body>
+    <div class="head">
+        <div class="nav"> 
+            <h4> NEW DELHI(NDLS) </h4>
+            <h4> MUNBAI CENTRAL(MMCT) </h4>
+            <input type="date" id="date"> 
+        </div>
+        <div class="main">
+            <div class="left">
+                <div class="fil">
+                    <div > <h2> Filters </h2> </div>
+                    <div> <h2>   <span style="color: red"> Reset All </span></h2> </div>
+                     </div><hr>
+                     <div class="input">
+                        <input type="radio">General 
+                        <input type="radio">Tatkal
+                     </div><br>
+                     <div class="input2">
+                        <input type="radio">Ladies
+                        <input type="radio">Senior Citizen
+                     </div><hr>
+                     <div class="ori"><h4> Origin Status</h4> </div>
+                     <div class="input3">
+                        <input type="checkbox"> NZM 
+                        <input type="checkbox"> NDLS 
+                     </div><br>
+                     <div class="input4">
+                        <input type="checkbox"> DEE
+                        <input type="checkbox"> SZM
+                     </div><br>
+                     <input type="checkbox" id="hell"> ANDI<hr>
+                     <div class="desnity">
+                       <h4>  Destination Station </h4> 
+                     </div>
+                     <div class="input5">
+                        <input type="checkbox"> MMCT
+                        <input type="checkbox"> CSMT
+                     </div><br>
+                     <div class="input6">
+                        <input type="checkbox"> PNVL
+                        <input type="checkbox"> BDTS
+                     </div>
+                    
+    
+                        
+            </div>
+            <div class="right">
+<div class="header"> 
+    <h3> Sort By : </h3>
+    <h3> Departure </h3>
+    <h3> Duration </h3>
+    <h3> Arrival </h3>
+</div>
+<div class="colour">
+<div class="temp">
+    <h4> 12904-GOLDEN TEMPLE </h4>
+    <h4> S M T W S T S</h4>
+</div>
+<div class="temp1">
+    <h4> 04:00 NZM --- 19hr 35m--23:35 MMCT </h4>
+    <h4> View Schedule</h4>
+</div>
+<div class="box">
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+
+
+</div>
+<div class="check"> Check six days availability </div>
+<br><br>
+<div class="colour1">
+    <div class="temp">
+        <h4> 12138-PUNJABMAIL </h4>
+        <h4> S M T W S T S</h4>
+    </div>
+    <div class="temp1">
+        <h4> 05:10 NDLS --- 26hr 25m--07:35 CSMS </h4>
+        <h4> View Schedule</h4>
+    </div>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+    
+    
+    </div>
+    <div class="check"> Check six days availability </div>
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+            </div>
+        </div><br><br><hr>
+        <div class="main">
+            <div class="left">
+                <div class="fil">
+                    <div > <h2> Filters </h2> </div>
+                    <div> <h2>   <span style="color: red"> Reset All </span></h2> </div>
+                     </div><hr>
+                     <div class="input">
+                        <input type="radio">General 
+                        <input type="radio">Tatkal
+                     </div><br>
+                     <div class="input2">
+                        <input type="radio">Ladies
+                        <input type="radio">Senior Citizen
+                     </div><hr>
+                     <div class="ori"><h4> Origin Status</h4> </div>
+                     <div class="input3">
+                        <input type="checkbox"> NZM 
+                        <input type="checkbox"> NDLS 
+                     </div><br>
+                     <div class="input4">
+                        <input type="checkbox"> DEE
+                        <input type="checkbox"> SZM
+                     </div><br>
+                     <input type="checkbox" id="hell"> ANDI<hr>
+                     <div class="desnity">
+                       <h4>  Destination Station </h4> 
+                     </div>
+                     <div class="input5">
+                        <input type="checkbox"> MMCT
+                        <input type="checkbox"> CSMT
+                     </div><br>
+                     <div class="input6">
+                        <input type="checkbox"> PNVL
+                        <input type="checkbox"> BDTS
+                     </div>
+                    
+    
+                        
+            </div>
+            <div class="right">
+<div class="header"> 
+    <h3> Sort By : </h3>
+    <h3> Departure </h3>
+    <h3> Duration </h3>
+    <h3> Arrival </h3>
+</div>
+<div class="colours">
+    <div class="temps">
+        <h4> 12904-GOLDEN TEMPLE </h4>
+        <h4> S M T W S T S</h4>
+    </div>
+    <div class="temps1">
+        <h4> 04:00 NZM --- 19hr 35m--23:35 MMCT </h4>
+        <h4> View Schedule</h4>
+    </div>
+    <div class="straight">
+        <h4> 2A-Second AC </h4>
+        <h4> 3A-Third AC </h4>
+        <h4> SL-Sleeper </h4>
+        <h4> 1A-First AC </h4>
+    </div>
+    <div class="datess">
+        <h4>tue 29,Apr </h4>
+        <h4> RLWL22/WL17</h4>
+        <button style="background-color: white"> BOOK$ 2325</button>
+    </div><br>
+    <div class="datess">
+        <h4>wed 30,Apr </h4>
+        <h4> RLWL22/WL17</h4>
+        <button style="background-color: white"> BOOK$ 2325</button>
+    </div>
+    <br><div class="datess">
+        <h4>thu 01,May  </h4>
+        <h4> RLWL22/WL17</h4>
+        <button style="background-color: white"> BOOK$ 2325</button>
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </div>   
+</body>
+</html>
+
+
+
