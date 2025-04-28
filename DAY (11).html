@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AbhiBus - Hyderabad to Bangalore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style> 
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+      }
+      
+      .navbar {
+        background: #fff;
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      
+      .navbar .logo {
+        font-size: 1.5rem;
+        color: #d32f2f;
+        font-weight: bold;
+      }
+      
+      .navbar nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .navbar nav li {
+        cursor: pointer;
+      }
+      
+      .header-options a {
+        margin-left: 1rem;
+        text-decoration: none;
+        color: #333;
+        font-size: 0.9rem;
+      }
+      
+      .search-bar {
+        background:lightsalmon;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      }
+      
+      .search-bar input, .search-bar button {
+        padding: 0.6rem;
+        font-size: 1rem;
+      }
+      
+      .main-container {
+        display: flex;
+        padding: 1rem;
+      }
+      
+      .filters {
+        width: 20%;
+        background: #fff;
+        padding: 1rem;
+        margin-right: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        border-radius: 8px;
+      }
+      
+      .filters .filter-group {
+        margin-bottom: 1.5rem;
+      }
+      
+      .filters .filter-group button {
+        display:flex;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        background:lightcoral;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .bus-listings {
+        width: 80%;
+      }
+      
+      .sort-bar {
+        background: #fff;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+      
+      .sort-bar button {
+        background: lightcoral;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .bus-card {
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      }
+      
+      .bus-card h4 {
+        margin: 0;
+      }
+      
+      .bus-card p, .bus-card small {
+        margin: 0.2rem 0;
+      }
+      
+      .bus-price p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: lightcoral;
+      }
+      
+      .bus-price button {
+        margin-top: 0.5rem;
+        background: lightcoral;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      .su{
+        display: flex;
+        gap: 10px;
+      }
+      
+      @media (max-width: 768px) {
+        .main-container {
+          flex-direction: column;
+        }
+        
+        .filters, .bus-listings {
+          width: 100%;
+        }
+      }
+      
+    
+
+
+
+
+
+</style>
+<body>
+
+<header class="navbar">
+  <div class="logo">abhi<span style="color: blue;">bus   </span></div>
+  <nav>
+    <ul>
+      <li>Buses</li>
+      <li>Flights</li>
+      <li>Trains</li>
+      <li>Hotels</li>
+    </ul>
+  </nav>
+  <div class="header-options">
+    <a href="#">Offers</a>
+    <a href="#">Track Ticket</a>
+    <a href="#">Need Help?</a>
+    <a href="#">Login/Signup</a>
+  </div>
+</header>
+
+<section class="search-bar">
+  <input type="text" placeholder="Hyderabad">
+  <input type="text" placeholder="Bangalore">
+  <input type="text" placeholder="Today ">
+  <input type="text" placeholder="Tommorrow ">
+  <button>Search</button>
+</section>
+
+<main class="main-container">
+  <aside class="filters">
+    <h3>Filters</h3>
+    <div class="filter-group">
+      <p>Bus Type</p>
+      <div class="su">  
+      <button>AC</button>
+      <button>Sleeper</button>
+      <button>Seater</button>
+      <button>Non AC</button></div>
+    </div>
+    <div class="filter-group">
+      <p>Price Range</p>
+      <input type="range" min="674" max="3999">
+    </div>
+    <div class="filter-group">
+      <p>Departure Time</p>
+      <div class="su"> 
+      <button>Before 10 AM</button>
+      <button>10 AM - 5 PM</button></div>
+      <div class="su"> 
+      <button>5 PM - 11 PM</button>
+      <button>After 11 PM</button></div>
+    </div>
+    <select id="buss"> 
+        <option> Bus partner </option>
+    </select>
+    <select id="buss"> 
+        <option> Boarding point  </option>
+    </select>
+    <select id="buss"> 
+        <option> dropping point </option>
+    </select>
+  </aside>
+  <section class="bus-listings">
+    <div class="sort-bar">
+      <span>Sort by:</span>
+      <button>Price</button>
+      <button>Seats</button>
+      <button>Ratings</button>
+      <button>Arrival Time</button>
+      <button>Departure Time</button>
+    </div>
+
+    <div class="bus-card">
+      <div class="bus-info">
+        <h4>TSRTC </h4>
+        <p>23 Buses, 643 Seats Available</p>
+      </div>
+      <div class="bus-price">
+        <p>From ₹761</p>
+        <button>View Buses</button>
+      </div>
+    </div>
+
+    <div class="bus-card">
+      <div class="bus-info">
+        <h4>Yolo Bus</h4>
+        <p>Benz AC Sleeper</p>
+        <small>12:04 Bangalore (11h 49m)</small>
+      </div>
+      <div class="bus-price">
+        <p>From ₹1030</p>
+        <button>Select Seats (27 Seats Available)</button>
+      </div>
+    </div>
+
+    <div class="bus-card">
+      <div class="bus-info">
+        <h4>SL Travels</h4>
+        <p> Sleeper, NON-AC</p>
+        <small> 05:00 Bangalore (10h)</small>
+      </div>
+      <div class="bus-price">
+        <p>From ₹1509</p>
+        <button>Select Seats (15 Seats Available)</button>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+</body>
+</html>
+
+
+
+
