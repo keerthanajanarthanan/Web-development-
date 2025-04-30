@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ixigo Flight Booking</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet"> -->
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: #fafbfc;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background:lavender;
+
+            padding: 14px 0 15px 0;
+            border-bottom: 1px solid #ececec;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        .header-content button{
+            width: 100px;
+            height: 30px;
+            color: white;
+            border-color: blue;
+        }
+        .logo {
+            height: 36px;
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            margin-left: 40px;
+        }
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #444;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 0 8px;
+        }
+        .nav-item.active {
+            color: #1a73e8;
+        }
+        .nav-item img {
+            width: 36px;
+            margin-bottom: 2px;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .header-link {
+            color: #444;
+            font-size: 15px;
+            text-decoration: none;
+            margin-right: 8px;
+        }
+        .user-icon {
+            width: 32px;
+            height: 32px;
+            background: #e6f0ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #1a73e8;
+        }
+        .login-link {
+            color: #1a73e8;
+            font-weight: 600;
+            margin-left: 8px;
+            text-decoration: none;
+        }
+        .main-section {
+            max-width: 1200px;
+            margin: 24px auto 0 auto;
+            padding: 0 32px;
+        }
+        .booking-box {
+            width: 1145px;
+            height: 160px;
+            background:lavender;
+            border-radius: 16px;
+            padding: 24px 24px 16px 24px; 
+            margin-bottom: 24px;
+            box-shadow: 0 4px 8px ;
+        }
+        .booking-tabs {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .booking-tab {
+            padding: 6px 18px;
+            border: 1px solid #d1d5db;
+            border-radius: 20px;
+            background: #fff;
+            color: #222;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .booking-tab.active {
+            background: #e6f0ff;
+            border-color: #1a73e8;
+            color: #1a73e8;
+        }
+        .booking-form {
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            background-color: white;
+        }
+        .input-label {
+            font-size: 13px;
+            color: white;
+            margin-bottom: 4px;
+        }
+        .input-field {
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 16px;
+            background:white;
+            border-color: black;
+        }
+        .search-btn {
+            background: blue;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 32px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-left: 8px;
+        }
+        .special-fares {
+            margin: 14px 0 0 0;
+            font-size: 14px;
+            color: #444;
+        }
+        .special-fares span {
+            margin-right: 8px;
+        }
+        .special-btn {
+            border: 1px solid #d1d5db;
+            border-radius: 16px;
+            padding: 4px 12px;
+            background: #fff;
+            margin-right: 6px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .hotel-checkbox {
+            margin-left: 8px;
+            accent-color: #1a73e8;
+        }
+        .do-more-section {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            padding: 18px 0;
+            margin-bottom: 24px;
+        }
+        .do-more-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #222;
+        }
+        .do-more-list {
+            height: 90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0;
+            padding: 0 24px;
+            background-color: white;
+            box-shadow: 0 4px 8px;
+        }
+        .do-more-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            color: black;
+            font-size: 15px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .do-more-item img {
+            width: 36px;
+            margin-bottom: 6px;
+        }
+        .offers-section {
+            margin-bottom: 32px;
+        }
+        .offers-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #222;
+        }
+        .offers-list {
+            display: flex;
+            gap: 18px;
+        }
+        .offer-card {
+            background:white;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            padding: 18px 18px 18px 18px;
+            min-width: 220px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .offer-card.orange {
+            background: lavender;
+            color: black;
+        }
+        .offer-card.blue {
+            background: #f0f7ff;
+        }
+        .offer-card.black {
+            background: #222;
+            color: #fff;
+        }
+        .offer-card .offer-title {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+        .offer-card .offer-desc {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 10px;
+        }
+        .offer-card .know-more {
+            background: blue;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 14px;
+            font-size: 13px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        @media (max-width: 900px) {
+            .main-section, .header-content { padding: 0 10px; }
+            .offers-list { flex-direction: column; gap: 12px; }
+            .do-more-list { flex-wrap: wrap; gap: 12px; }
+        }
+        .nav{
+            margin-left: 210px;
+            margin-top: 10px;
+        }
+        .wait{
+            margin-left: 480px;
+        }
+        #glass{
+            margin-left: 390px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <button style="background-color: blue">ixigo</button>
+            
+
+
+            <div class="header-right">
+                <a href="#" class="header-link">Offers</a>
+                <a href="#" class="header-link">Customer Service</a>
+                <span class="user-icon">👤</span>
+                <a href="#" class="login-link">Log in/Sign up</a>
+            </div>
+
+        </div>
+        
+    </div>
+    <div class="nav">
+        <div class="nav-item active">
+            Flights✈️
+        </div>
+        <div class="nav-item">
+            Hotels🏨
+        </div>
+        <div class="nav-item">
+            Trains🚅
+        </div>
+        <div class="nav-item">
+            Buses🚌
+        </div>
+        <div class="wait">Flight booking </div>
+    </div>
+    <div class="main-section">
+        <div class="booking-box">
+            <div style="font-size:16px;font-weight:600;margin-bottom:10px;">Flight Booking</div>
+            <div class="booking-tabs">
+                <div class="booking-tab active">One Way</div>
+                <div class="booking-tab">Round Trip</div>
+            </div>
+            <form class="booking-form">
+                <div class="input-group">
+                    <label class="input-label"></label>
+                    <input class="input-field" type="text" placeholder="From">
+                </div>
+                <div class="input-group">
+                    <label class="input-label"></label>
+                    <input class="input-field" type="text" placeholder="To">
+                </div>
+                <div class="input-group">
+                    <label class="input-label"></label>
+                    <input class="input-field" type="date">
+                </div>
+                <div class="input-group">
+                    <label class="input-label"></label>
+                    <input class="input-field" type="date" disabled>
+                </div>
+                <div class="input-group" style="max-width:180px;">
+                    <label class="input-label"></label>
+                    <input class="input-field" type="text" value="1 Traveller, Economy" readonly>
+                </div>
+                <button class="search-btn" type="submit">Search</button>
+            </form>
+            <div class="special-fares">
+                <span>Special Fares (Optional):</span>
+                <button class="special-btn">Student</button>
+                <button class="special-btn">Senior Citizen</button>
+                <button class="special-btn">Armed Forces</button>
+                <input type="checkbox" class="hotel-checkbox" checked>
+                <span style="color:#1a73e8;font-weight:500;" id="glass">Add hotel and save up to 50%</span>
+            </div>
+        </div>
+        <div class="do-more-title">Do More With ixigo</div>
+        <div class="do-more-section">
+            <div class="do-more-list">
+                <div class="do-more-item">
+                    Flight Tracker
+                </div>
+                <div class="do-more-item">
+                    Book Visa
+                </div>
+                <div class="do-more-item">
+                    Travel Insurance
+                </div>
+                <div class="do-more-item">
+                    Credit Card
+                </div>
+                <div class="do-more-item">
+                    Group Booking
+                </div>
+                <div class="do-more-item">
+                    Airport Cabs
+                </div>
+                <div class="do-more-item">
+                    Plan
+                </div>
+                <div class="do-more-item">
+                    Fare Alerts
+                </div>
+            </div>
+        </div>
+        <div class="offers-section">
+            <div class="offers-title">Today's Flight Offers</div>
+            <div class="offers-list">
+                <div class="offer-card orange">
+                    <div class="offer-title">TRAVEL ADVISORY</div>
+                    <div class="offer-desc">In this difficult time for Kashmir, we're here for you!<br>Full refunds & free rescheduling on Flights and Hotels</div>
+                    <a href="#" class="know-more">Know More</a>
+                </div>
+                <div class="offer-card blue">
+                    <div class="offer-title"> HDFC BANK</div>
+                    <div class="offer-desc">Get up to ₹2,000 Off on Domestic Flights with HDFC Bank Cards EMI</div>
+                </div>
+                <div class="offer-card blue">
+                    <div class="offer-title"> HDFC BANK</div>
+                    <div class="offer-desc">Get up to ₹7,500 Off on Int'l Flights with HDFC Bank Cards EMI</div>
+                </div>
+                <div class="offer-card black">
+                    <div class="offer-title">Lifetime Free*<br>Ixigo AU Credit Card</div>
+                    <div class="offer-desc" style="color:#fff;">
+                        ₹1500 Joining Bonus<br>
+                        10% Off on Bookings<br>
+                        Zero Forex Markup<br>
+                        Free Lounge Access
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-title" style="color:#1a73e8;">Get Flat 12% Off</div>
+                    <div class="offer-desc">on First Flight Booking</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
